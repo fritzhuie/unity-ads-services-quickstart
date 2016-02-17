@@ -20,24 +20,21 @@ INTEGRATING UNITY ADS
 
 - Once that's done, select **Window > Unity Services** 
 - Select an Organization from the drop down menu
-- Click "Create" 
+- Click **Create**
 
 ![Services Window](images/servicesorg.png)
 
-- Click "Ads", and enable the SDK in your project.
+- Click **Ads**, and enable the SDK in your project.
 
 ![Services Window > Ads](images/services.png)
 
 ### Add the code
 
-1. First, declare the Unity Ads namespace in the header of your script
-``` csharp
-using UnityEngine.Advertisements;
-```
-2. You can display an ad by calling the following method
-``` csharp
-Advertisement.Show()
-```
+1. First, declare the Unity Ads namespace in the header of your script  
+ 	`using UnityEngine.Advertisements;`
+
+2. You can display an ad by calling the following method  
+	`Advertisement.Show()`
 
 ### Example Code
 ##### Add a button to your scene that plays an ad, then handles status and callbacks
@@ -117,7 +114,7 @@ public class UnityAdsButton : MonoBehaviour
 	- Point boosts for the next round
 
 
-- You can reward players for completing a video ad when the result of showing an ad is `ShowResult.Finished`
+- You can reward players for completing a video ad when the result of showing an ad is **ShowResult.Finished**
 
 ```csharp
 private void HandleShowResult (ShowResult result)
