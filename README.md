@@ -1,12 +1,14 @@
-#### Unity-Ads-Example
-Example project - Unity Ads Quickstart Guide
+#### Welcome to Unity Ads!
 
-> February 17th, 2016
-
-This guide provides a quick integration of Unity Ads into a Unity 5.2 game.
+- This repo includes an example project and quickstart guide for **Unity 5.2 or later**. Additional integration guides:
+	- [Asset Package]()
+	- [Native iOS]()
+	- [Native Android]()
 
 INTEGRATING UNITY ADS
 ===========================
+
+> Updated: February 17th, 2016
 
 ### Enable Ads in Unity
 
