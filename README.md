@@ -134,7 +134,7 @@ if (result == ShowResult.Finished)
 - Log into the [Dashboard](https://dashboard.unityads.unity3d.com/Dashboard) using your UDN Account
 - From here, you can modify placements and other game-specific settings.
 
-![dashboard](resources/dashboard2.png)
+![dashboard](images/dashboard2.png)
 
 - Additional information on placements can be found in our [placements Documentation](http://unityads.unity3d.com/help/monetization/placements).
 - For additional questions, check out the [forum](http://forum.unity3d.com/forums/unity-ads.67) or contact support@unity3d.com
