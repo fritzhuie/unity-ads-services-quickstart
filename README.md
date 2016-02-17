@@ -13,7 +13,8 @@ INTEGRATING UNITY ADS
 - First, open your game project, or create a new Unity project
 - Select Edit > Build Settings and set the platform to iOS or Android 
 - Enable Ads in the Unity Services Panel
-> ![Build Settings](images/build-settings.png)
+- 
+![Build Settings](images/build-settings.png)
 
 - Once that's done, select Window -> Unity Services 
 - Select an Organization from the drop down menu
@@ -22,9 +23,11 @@ INTEGRATING UNITY ADS
 ![Services Window](images/servicesorg.png)
 
 - Click "Ads", and enable the SDK in your project.
+
 ![Services Window > Ads](images/services.png)
 
 ### Add the code
+
 1. First, declare the Unity Ads namespace in the header of your script
 ``` csharp
 using UnityEngine.Advertisements;
@@ -124,7 +127,7 @@ if (result == ShowResult.Finished)
 ```
 
 
-### Manage your profile in the 
+### Manage your profile in the [Dashboard](https://dashboard.unityads.unity3d.com/Dashboard)
 
 - Log into the [Dashboard](https://dashboard.unityads.unity3d.com/Dashboard) using your UDN Account
 - From here, you can modify placements and other game-specific settings.
