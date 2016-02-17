@@ -13,12 +13,12 @@ INTEGRATING UNITY ADS
 ### Enable Ads in Unity
 
 - First, open your game project, or create a new Unity project
-- Select Edit > Build Settings and set the platform to iOS or Android 
+- Select **Edit > Build Settings** and set the platform to iOS or Android 
 - Enable Ads in the Unity Services Panel
 
 ![Build Settings](images/build-settings.png)
 
-- Once that's done, select Window -> Unity Services 
+- Once that's done, select **Window > Unity Services** 
 - Select an Organization from the drop down menu
 - Click "Create" 
 
@@ -42,7 +42,7 @@ Advertisement.Show()
 ### Example Code
 ##### Add a button to your scene that plays an ad, then handles status and callbacks
 
-1. Select Game Object > UI > Button to add a Button in your scene
+1. Select **Game Object > UI > Button** to add a Button in your scene
 2. Add the following script to the button
 
 ```csharp
