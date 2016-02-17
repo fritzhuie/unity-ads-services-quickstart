@@ -15,7 +15,7 @@ INTEGRATING UNITY ADS
 - First, open your game project, or create a new Unity project
 - Select Edit > Build Settings and set the platform to iOS or Android 
 - Enable Ads in the Unity Services Panel
-- 
+
 ![Build Settings](images/build-settings.png)
 
 - Once that's done, select Window -> Unity Services 
