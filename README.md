@@ -37,10 +37,10 @@ INTEGRATING UNITY ADS
 	`Advertisement.Show()`
 
 ### Example Code
-##### Add a button to your scene that plays an ad, then handles status and callbacks
+Add a button to your scene that plays an ad, then handles status and callbacks
 
-1. Select **Game Object > UI > Button** to add a Button in your scene
-2. Add the following script to the button
+  1. Select **Game Object > UI > Button** to add a Button in your scene  
+  2. Add the following script to the button
 
 ```csharp
 using UnityEngine;
