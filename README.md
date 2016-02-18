@@ -1,30 +1,30 @@
 #### Welcome to Unity Ads!
 
-- This repo includes an example project and quickstart guide for **Unity 5.2 or later**. Additional integration guides:
-	- [Asset Package]()
-	- [Native iOS]()
-	- [Native Android]()
+This repo includes an example project and quickstart guide for **Unity 5.2 or later**. Additional integration guides:
 
-INTEGRATING UNITY ADS
-===========================
+  - [Asset Package]()
+  - [Native iOS]()
+  - [Native Android]()
+
+# INTEGRATING UNITY ADS
 
 > Updated: February 17th, 2016
 
 ### Enable Ads in Unity
 
-- First, open your game project, or create a new Unity project
-- Select **Edit > Build Settings** and set the platform to iOS or Android 
-- Enable Ads in the Unity Services Panel
+First, open your game project, or create a new Unity project
+Select **Edit > Build Settings** and set the platform to iOS or Android 
+Enable Ads in the Unity Services Panel
 
 ![Build Settings](images/build-settings.png)
 
-- Once that's done, select **Window > Unity Services** 
-- Select an Organization from the drop down menu
-- Click **Create**
+Once that's done, select **Window > Unity Services** 
+Select an Organization from the drop down menu
+Click **Create**
 
 ![Services Window](images/servicesorg.png)
 
-- Click **Ads**, and enable the SDK in your project.
+Click **Ads**, and enable the SDK in your project.
 
 ![Services Window > Ads](images/services.png)
 
@@ -100,21 +100,22 @@ public class UnityAdsButton : MonoBehaviour
 
 
 
-- Additional examples and troubleshooting can be found in our [monetization documentation](http://unityads.unity3d.com/help/monetization/integration-guide-unity).
-- For additional questions, check out the [forum](http://forum.unity3d.com/forums/unity-ads.67) or contact support@unity3d.com
+Additional examples and troubleshooting can be found in our [monetization documentation](http://unityads.unity3d.com/help/monetization/integration-guide-unity).
+For additional questions, check out the [forum](http://forum.unity3d.com/forums/unity-ads.67) or contact support@unity3d.com
 
 ### How to reward players
 
-- It's a good idea to reward players for watching ads
-- Rewarding players adds user engagement, resulting in higher revenue
+It's a good idea to reward players for watching ads
+Rewarding players adds user engagement, resulting in higher revenue
 
-- A rewarded ads implementation generally includes one or more of the following: 
-	- In-game currency reward
-	- Extra lives at the start of the game
-	- Point boosts for the next round
+A rewarded ads implementation generally includes one or more of the following: 
+
+- In-game currency reward
+- Extra lives at the start of the game
+- Point boosts for the next round
 
 
-- You can reward players for completing a video ad when the result of showing an ad is **ShowResult.Finished**
+You can reward players for completing a video ad when the result of showing an ad is **ShowResult.Finished**
 
 ```csharp
 private void HandleShowResult (ShowResult result)
@@ -128,11 +129,13 @@ if (result == ShowResult.Finished)
 
 ### Manage your profile in the [Dashboard](https://dashboard.unityads.unity3d.com/Dashboard)
 
-- Log into the [Dashboard](https://dashboard.unityads.unity3d.com/Dashboard) using your UDN Account
-- From here, you can modify placements and other game-specific settings.
+Log into the [Dashboard](https://dashboard.unityads.unity3d.com/Dashboard) using your UDN Account
+
+From here, you can modify placements and other game-specific settings.
 
 ![dashboard](images/dashboard2.png)
 
-- Additional information on placements can be found in our [placements Documentation](http://unityads.unity3d.com/help/monetization/placements).
-- For additional questions, check out the [forum](http://forum.unity3d.com/forums/unity-ads.67) or contact support@unity3d.com
+Additional information on placements can be found in our [placements Documentation](http://unityads.unity3d.com/help/monetization/placements).
+
+For additional questions, check out the [forum](http://forum.unity3d.com/forums/unity-ads.67) or contact support@unity3d.com
 
