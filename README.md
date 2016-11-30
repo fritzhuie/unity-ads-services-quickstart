@@ -10,19 +10,21 @@ This repo includes an example project and quickstart guide for **Unity 5.2 or la
 
 ### Enable Ads in Unity
 
-First, open your game project, or create a new Unity project
-Select **Edit > Build Settings** and set the platform to iOS or Android 
-Enable Ads in the Unity Services Panel
+First, set the build targets and enable Unity Ads in the Services Panel.
+
+1. pen your game project, or create a new Unity project
+2. Select **Edit > Build Settings**, and set the platform to iOS or Android
+3. Enable Ads in the Unity Services Panel
 
 ![Build Settings](images/build-settings.png)
 
 Once that's done, select **Window > Unity Services** 
-Select an Organization from the drop down menu
+Select an Organization from the drop down menu:
 Click **Create**
 
 ![Services Window](images/servicesorg.png)
 
-Click **Ads**, and enable the SDK in your project.
+Click **Ads**, and enable the SDK in your project:
 
 ![Services Window > Ads](images/services.png)
 
@@ -35,9 +37,9 @@ Click **Ads**, and enable the SDK in your project.
 	`Advertisement.Show()`
 
 ### Example Code
-Add a button to your scene that plays an ad, then handles status and callbacks
+Add a button to your scene that plays an ad, then handles status and callbacks.
 
-  1. Select **Game Object > UI > Button** to add a Button in your scene  
+  1. Select **Game Object > UI > Button** to add a Button in your scene
   2. Add the following script to the button
 
 ```csharp
@@ -99,10 +101,9 @@ public class UnityAdsButton : MonoBehaviour
 Additional examples and troubleshooting can be found in our [monetization documentation](http://unityads.unity3d.com/help/monetization/integration-guide-unity).
 For additional questions, check out the [forum](http://forum.unity3d.com/forums/unity-ads.67) or contact support@unity3d.com
 
-### How to reward players
+### Reward Players for Watching Ads
 
-It's a good idea to reward players for watching ads
-Rewarding players adds user engagement, resulting in higher revenue
+Rewarding players adds user engagement, resulting in higher revenue!
 
 A rewarded ads implementation generally includes one or more of the following: 
 
@@ -110,8 +111,7 @@ A rewarded ads implementation generally includes one or more of the following:
 - Extra lives at the start of the game
 - Point boosts for the next round
 
-
-You can reward players for completing a video ad when the result of showing an ad is **ShowResult.Finished**
+You can reward players for completing a video ad in **HandleShowResult**. Ensure that the ad was not skipped with **ShowResult.Finished**.
 
 ```csharp
 private void HandleShowResult (ShowResult result)
@@ -123,13 +123,19 @@ if (result == ShowResult.Finished)
 ```
 
 
-### Manage your profile in the [Dashboard](https://dashboard.unityads.unity3d.com/Dashboard)
+### Manage Monetization Settings in the [Dashboard](https://dashboard.unityads.unity3d.com/Dashboard)
 
-Log into the [Dashboard](https://dashboard.unityads.unity3d.com/Dashboard) using your UDN Account
+Log into the [Dashboard](https://dashboard.unityads.unity3d.com/Dashboard) using your UDN Account, and locate your game project.
+
+![dashboard](images/dashboard-a.png)
+
+Then, select a platform (iOS or Android)
+
+![dashboard](images/dashboard-b.png)
 
 From here, you can modify placements and other game-specific settings.
 
-![dashboard](images/dashboard2.png)
+![dashboard](images/dashboard-c.png)
 
 Additional information on placements can be found in our [placements Documentation](http://unityads.unity3d.com/help/monetization/placements).
 
