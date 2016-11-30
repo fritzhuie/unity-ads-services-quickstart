@@ -133,7 +133,7 @@ if (result == ShowResult.Finished)
 
 Log into the [Unity Ads dashboard](https://dashboard.unityads.unity3d.com/Dashboard) using your UDN Account, and locate the project for your game.
 
-![dashboard](images/dashboard-a.png)
+![dashboard](images/dashboard-A.png)
 
 Then, select a platform (iOS or Android).
 
