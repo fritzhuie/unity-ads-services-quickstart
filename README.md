@@ -1,8 +1,12 @@
 #### Welcome to Unity Ads!
 
-This repo includes an example project and quickstart guide for **Unity 5.2 or later**. Additional integration guides:
+Unity Ads can be enabled directly in **Unity 5.2 or later**.
 
-  - [Unity Ads Documentation](http://unityads.unity3d.com/help/monetization/getting-started)
+Click here for Official Unity Ads documentation and additional integration paths:
+
+- [Unity Ads Documentation](http://unityads.unity3d.com/help/monetization/getting-started)
+- [Native iOS integration](http://unityads.unity3d.com/help/monetization/integration-guide-ios)
+- [Native Android integration](http://unityads.unity3d.com/help/monetization/integration-guide-android)
 
 # INTEGRATING UNITY ADS
 
@@ -122,14 +126,13 @@ if (result == ShowResult.Finished)
 }
 ```
 
-
-### Manage Monetization Settings in the [Dashboard](https://dashboard.unityads.unity3d.com/Dashboard)
+### Manage Settings in the [Ads Dashboard](https://dashboard.unityads.unity3d.com/Dashboard)
 
 Log into the [Dashboard](https://dashboard.unityads.unity3d.com/Dashboard) using your UDN Account, and locate your game project.
 
 ![dashboard](images/dashboard-a.png)
 
-Then, select a platform (iOS or Android)
+Then, select a platform (iOS or Android).
 
 ![dashboard](images/dashboard-b.png)
 
@@ -139,5 +142,5 @@ From here, you can modify placements and other game-specific settings.
 
 Additional information on placements can be found in our [placements Documentation](http://unityads.unity3d.com/help/monetization/placements).
 
-For additional questions, check out the [forum](http://forum.unity3d.com/forums/unity-ads.67) or contact support@unity3d.com
+For additional questions, check out the [forum](http://forum.unity3d.com/forums/unity-ads.67), [Official Unity Ads Docs](http://unityads.unity3d.com/help/monetization/getting-started), or contact us at support@unity3d.com
 
