@@ -4,7 +4,9 @@ Unity Ads can be enabled directly in **Unity 5.2 or later**.
 
 Click here for Official Unity Ads documentation and additional integration paths:
 
-- [Unity Ads Documentation](http://unityads.unity3d.com/help/monetization/getting-started)
+- [Unity Ads Documentation](https://docs.unity3d.com/Manual/UnityAdsHowTo.html)
+- [Unity Ads Knowledge Base](http://unityads.unity3d.com/help/monetization/getting-started)
+- [Unity Support Knowledge Base](https://support.unity3d.com/hc/en-us/sections/201163835-Ads)
 - [Native iOS integration](http://unityads.unity3d.com/help/monetization/integration-guide-ios)
 - [Native Android integration](http://unityads.unity3d.com/help/monetization/integration-guide-android)
 
@@ -16,13 +18,13 @@ Click here for Official Unity Ads documentation and additional integration paths
 
 First, set the build targets and enable Unity Ads in the Services Panel.
 
-1. pen your game project, or create a new Unity project
-2. Select **Edit > Build Settings**, and set the platform to iOS or Android
-3. Enable Ads in the Unity Services Panel
+1. Open your game project, or create a new Unity project.
+2. Select **Edit > Build Settings**, and set the platform to iOS or Android.
+3. Enable Ads in the Unity Services window.
 
 ![Build Settings](images/build-settings.png)
 
-Once that's done, select **Window > Unity Services** 
+Once that's done, select **Window > Services** 
 Select an Organization from the drop down menu:
 Click **Create**
 
@@ -34,103 +36,104 @@ Click **Ads**, and enable the SDK in your project:
 
 ### Add the code
 
-1. First, declare the Unity Ads namespace in the header of your script  
+1. First, declare the Unity Ads namespace in the header of your script:  
  	`using UnityEngine.Advertisements;`
 
-2. You can display an ad by calling the following method  
+2. You can display an ad by calling the following method:  
 	`Advertisement.Show()`
 
 ### Example Code
 Add a button to your scene that plays an ad, then handles status and callbacks.
 
-  1. Select **Game Object > UI > Button** to add a Button in your scene
-  2. Add the following script to the button
+  1. Select **Game Object > UI > Button** to add a Button in your scene.
+  2. Add the following script to the button.
 
 ```csharp
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
-using System.Collections;
 
 [RequireComponent(typeof(Button))]
 public class UnityAdsButton : MonoBehaviour
 {
 	public string zoneId;
 
-	private Button _button;
+	Button m_Button;
 
 	void Start ()
 	{
-		_button = GetComponent&lt;Button&gt;();
+		m_Button = GetComponent<Button>();
 
-		if (_button) _button.onClick.AddListener (ShowAdPlacement);
+		if (m_Button) m_Button.onClick.AddListener(ShowAdPlacement);
 	}
 
 	void Update ()
 	{
-		if (_button) {
-			if (string.IsNullOrEmpty (zoneId)) zoneId = null;
-			_button.interactable = Advertisement.IsReady (zoneId);
+		if (m_Button)
+		{
+			if (string.IsNullOrEmpty(zoneId)) zoneId = null;
+			m_Button.interactable = Advertisement.IsReady(zoneId);
 		}
 	}
 
 	void ShowAdPlacement ()
 	{
-		if (string.IsNullOrEmpty (zoneId)) zoneId = null;
+		if (string.IsNullOrEmpty(zoneId)) zoneId = null;
 
-		ShowOptions options = new ShowOptions();
+		var options = new ShowOptions();
 		options.resultCallback = HandleShowResult;
 
-		Advertisement.Show (zoneId, options);
+		Advertisement.Show(zoneId, options);
 	}
 
-	private void HandleShowResult (ShowResult result)
+	void HandleShowResult (ShowResult result)
 	{
-		switch (result)
+		switch(result)
 		{
 		case ShowResult.Finished:
-			Debug.Log ("Video completed. Offer a reward to the player.");
+			Debug.Log("Video completed. Offer a reward to the player.");
 			break;
 		case ShowResult.Skipped:
-			Debug.LogWarning ("Video was skipped.");
+			Debug.LogWarning("Video was skipped.");
 			break;
 		case ShowResult.Failed:
-			Debug.LogError ("Video failed to show.");
+			Debug.LogError("Video failed to show.");
 			break;
 		}
 	}
 }
 ```
+Then simply press the editor Play button to test the Unity Ads Button integration.
 
 Additional examples and troubleshooting can be found in our [monetization documentation](http://unityads.unity3d.com/help/monetization/integration-guide-unity).
-For additional questions, check out the [forum](http://forum.unity3d.com/forums/unity-ads.67) or contact support@unity3d.com
+If you have any questions, please post them to the [Unity Ads forum](http://forum.unity3d.com/forums/unity-ads.67) or contact us at unityads-support@unity3d.com
 
 ### Reward Players for Watching Ads
 
-Rewarding players adds user engagement, resulting in higher revenue!
+Rewarding players can add to user engagement, resulting in higher revenue!
 
-A rewarded ads implementation generally includes one or more of the following: 
+Typically rewarded ad implementation generally involve one or more of the following: 
 
-- In-game currency reward
+- In-game currency or consumables
 - Extra lives at the start of the game
 - Point boosts for the next round
 
-You can reward players for completing a video ad in **HandleShowResult**. Ensure that the ad was not skipped with **ShowResult.Finished**.
+You can reward players for completing a video ad using the **HandleShowResult** callback method in the example above. Be sure to check that the result is **ShowResult.Finished** to verify that the ad was not skipped before granting the reward.
 
 ```csharp
 private void HandleShowResult (ShowResult result)
 if (result == ShowResult.Finished)
 {
-//Add code to reward your player here!
-//Give coins, etc
+	//Add code to reward your player here!
+	//Give coins, etc
 }
 ```
 
 ### Manage Settings in the [Ads Dashboard](https://dashboard.unityads.unity3d.com/Dashboard)
 
-Log into the [Dashboard](https://dashboard.unityads.unity3d.com/Dashboard) using your UDN Account, and locate your game project.
+Log into the [Unity Ads dashboard](https://dashboard.unityads.unity3d.com/Dashboard) using your UDN Account, and locate the project for your game.
 
-![dashboard](images/dashboard-a.png)
+![dashboard](images/dashboard-A.png)
 
 Then, select a platform (iOS or Android).
 
@@ -142,5 +145,5 @@ From here, you can modify placements and other game-specific settings.
 
 Additional information on placements can be found in our [placements Documentation](http://unityads.unity3d.com/help/monetization/placements).
 
-For additional questions, check out the [forum](http://forum.unity3d.com/forums/unity-ads.67), [Official Unity Ads Docs](http://unityads.unity3d.com/help/monetization/getting-started), or contact us at support@unity3d.com
+For additional info, please see the [Unity Ads forum](http://forum.unity3d.com/forums/unity-ads.67), [Unity Ads Knowledge Base](http://unityads.unity3d.com/help/monetization/getting-started), [Unity Ads Documentation](https://docs.unity3d.com/Manual/UnityAdsHowTo.html), [Unity Support Knowledge Base](https://support.unity3d.com/hc/en-us/sections/201163835-Ads), or contact us directly at unityads-support@unity3d.com.
 
