@@ -2,13 +2,11 @@
 
 This repo includes an example project and quickstart guide for **Unity 5.2 or later**. Additional integration guides:
 
-  - [Asset Package]()
-  - [Native iOS]()
-  - [Native Android]()
+  - [Unity Ads Documentation](http://unityads.unity3d.com/help/monetization/getting-started)
 
 # INTEGRATING UNITY ADS
 
-> Updated: February 17th, 2016
+> Updated: November 29th, 2016
 
 ### Enable Ads in Unity
 
@@ -59,7 +57,7 @@ public class UnityAdsButton : MonoBehaviour
 	{
 		_button = GetComponent&lt;Button&gt;();
 
-		if (_button) _button.onClick.AddListener (delegate() { ShowAdPlacement(); });
+		if (_button) _button.onClick.AddListener (ShowAdPlacement);
 	}
 
 	void Update ()
@@ -97,8 +95,6 @@ public class UnityAdsButton : MonoBehaviour
 	}
 }
 ```
-
-
 
 Additional examples and troubleshooting can be found in our [monetization documentation](http://unityads.unity3d.com/help/monetization/integration-guide-unity).
 For additional questions, check out the [forum](http://forum.unity3d.com/forums/unity-ads.67) or contact support@unity3d.com
